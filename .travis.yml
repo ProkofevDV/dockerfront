@@ -3,7 +3,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t dmdeveloper/simpleweb -f Dockerfile.dev .
+  - docker build -t ProkofevDV/dockerfront -f Dockerfile.dev .
 
 script:
-  - docker run dmdeveloper/simpleweb npm run test -- --coverage
+  - docker run ProkofevDV/dockerfront npm run test -- --coverage
