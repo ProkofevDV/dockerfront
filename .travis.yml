@@ -6,5 +6,5 @@ before_install:
   - docker build -t dockerfront -f Dockerfile.dev .
 
 script:
-  - docker run dockerfront npm run test -- --coverage
+  - docker run dockerfront npm run test
 
