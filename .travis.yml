@@ -1,12 +1,8 @@
-env:
-  - YARN_GPG=no
 sudo: required
 services:
   - docker
 
 before_install:
-  - node --version
-  - yarn --version
   - docker build -t dockerfront2 -f Dockerfile.dev .
 
 script:
