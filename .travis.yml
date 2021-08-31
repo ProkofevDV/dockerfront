@@ -7,3 +7,4 @@ before_install:
 
 script:
   - docker run ProkofevDV/dockerfront npm run test -- --coverage
+
