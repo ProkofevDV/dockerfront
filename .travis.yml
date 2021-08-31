@@ -3,8 +3,8 @@ services:
   - docker
 
 before_install:
-  - docker build -t dockerfront -f Dockerfile.dev .
+  - docker build -t dockerfront2 -f Dockerfile.dev .
 
 script:
-  - docker run dockerfront npm run test
+  - docker run dockerfront2 npm run test -- --coverage
 
