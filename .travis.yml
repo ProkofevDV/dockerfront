@@ -1,10 +1,21 @@
 sudo: required
+language: generic
+
 services:
   - docker
 
 before_install:
-  - docker build -t dockerfront2 -f Dockerfile.dev .
+  - docker build -t dockerfront-aws -f Dockerfile.dev .
 
 script:
-  - docker run -e CI=true dockerfront2 npm run test -- --coverage
+  - docker run -e CI=true dockerfront-aws npm run test
 
+deploy:
+  provider: elasticbeanstalk
+  region: 'us-east-2'
+  app: 'dockerfront'
+  env: 'Dockerfront-env'
+  bucket_name: 'elasticbeanstalk-us-east-2-923445559289'
+  bucket_path: 'dockerfront'
+  on:
+    branch: master
