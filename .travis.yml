@@ -15,7 +15,7 @@ deploy:
   provider: elasticbeanstalk
   region: 'us-east-2'
   app: 'dockerfront'
-  env: 'Dockerfront-env'
+  env: 'Dockerfront-env-1'
   bucket_name: 'elasticbeanstalk-us-east-2-448774642000'
   bucket_path: 'dockerfront'
   on:
