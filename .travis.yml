@@ -6,7 +6,7 @@ services:
 
 
 before_install:
-  - docker build -t dockerfront-aws -f Dockerfile .
+  - docker build -t dockerfront-aws -f Dockerfile.dev .
 
 script:
   - docker run -e CI=true dockerfront-aws npm run test -- --coverage
